@@ -1,0 +1,11 @@
+class Main{  
+ static void display(String... values){// dontknow how many arguments to be passed   
+  System.out.println("display method invoked ");  
+ }  
+  
+ public static void main(String args[]){  
+  
+ display();//zero argument  will be displayed once  
+ display("name","is","varargs");//four arguments  and will be duisplayed twice 
+ }   
+}\\if we dont know the numbe rof arguments to be used and uncountable aruguments displayed 
