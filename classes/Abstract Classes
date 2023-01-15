@@ -1,0 +1,39 @@
+abstract class Zoho{
+	private String name;
+	abstract void welcomeMessage();
+	public String getName(){
+		return name;
+	}
+}
+
+class PT extends Zoho{
+	void welcomeMessage() {
+		System.out.println("Hello PT...");
+	}
+}
+
+class Mts extends Zoho{
+	void welcomeMessage() {
+		System.out.println("Hello MTS...");
+	}
+}
+public class Main{
+	public static void main(String args[]) {
+		PT s1 = new PT();
+		Mts t1 = new Mts();
+		
+		//Zoho m1 = new PT();
+		
+		Zoho[] m = new Zoho[4];
+		m[0] = new PT();
+		m[1] = new PT();
+		m[2] = new Mts();
+		m[3] = new Mts();
+		
+		for(Zoho m1 : m) {
+			m1.welcomeMessage();
+		}
+		
+	}
+
+}
