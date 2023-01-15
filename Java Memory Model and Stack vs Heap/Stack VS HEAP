@@ -1,0 +1,28 @@
+Stack VS HEAP 
+
+class Zohomember{
+    int id;
+    String name;
+
+    public Zohomember(int id, String name) {
+        this.id = id;
+        this.name = name;                                          //All wil be stored Stack 
+    }
+}
+
+
+
+public class member {
+    private static Zohomember member(int id, String name) {
+        return new Zohomember(id, name);
+    }
+
+
+
+    public static void Main(String[] args) {
+        int id = 20;//HEAP 
+        String name = "Melo";// HEAP
+        Zohomember zohomember = null;//HEAP -Dereferencing 
+        Zohomember =member(id, name);
+    }
+}
