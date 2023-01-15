@@ -1,0 +1,19 @@
+Live or Dead Nodes 
+
+
+Types of GC Roots
+
+Class: Classes loaded by a system class loader; contains references to static variables as well
+Stack Local: Local variables and parameters to methods stored on the local stack
+Active Java Threads: All active Java threads
+JNI References: Native code Java objects created for JNI calls; contains local variables, parameters to JNI methods, and global JNI references
+
+Finalize 
+Object of a class is created.
+Object get's unreferenced or it is unreachable. These objects are of no use and occupy unnecessary space.
+The unreachable object is added to the finalization queue by the Garbage Collector which is invoked by the JVM.
+finalize() method performs clean up activity and object is finalized.
+GC destroys the object completely and reclaims the space occupied by the object.
+But finalize method is not really needed!
+
+protected void finalize() throws Throwable{}
