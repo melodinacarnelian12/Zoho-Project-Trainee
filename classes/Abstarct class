@@ -1,0 +1,27 @@
+class Zoho{
+	void display() {
+		System.out.println("I work at Zoho");
+	}
+	
+}
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Zoho c = new Zoho()   // anonymous class
+				{
+					void display() {
+						System.out.println("I dont work at Zoho ");
+					}
+				};
+				
+		Zoho c2 = new Zoho();
+		
+		c.display();//I dont work at Zoho
+		c2.display();//I work at Zoho
+		
+	}
+
+}
