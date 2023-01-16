@@ -1,0 +1,12 @@
+class Main{
+    public void ctp(){
+        System.out.println("Same name and has a same class");}
+    public void ctp(int a){
+        System.out.println("But has a different argument");}
+
+public static void main(String[] args) {
+        Main m1= new Main();
+        m1.ctp();
+        m1.ctp(676);
+    }
+}
