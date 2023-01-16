@@ -1,0 +1,14 @@
+class Main1{
+    public void ctp(){
+        System.out.println("Same name and different class");}}
+        class Main2 extends Main1{
+    public void ctp(){
+        System.out.println("But has a same  argument");}
+
+public static void main(String[] args) {
+        Main1 m1= new Main1();
+        m1.ctp();
+        Main2 m2=new Main2();
+        m2.ctp();
+    }
+}
