@@ -1,0 +1,12 @@
+interface Main{
+    void smile();
+}
+class B implements main{
+    public void smile(){
+        System.out.println("hi....");
+    public static void main(String[] args){
+        B second=new B();
+        second.smile();
+    }
+}
+}
