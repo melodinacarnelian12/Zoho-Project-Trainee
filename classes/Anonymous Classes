@@ -1,4 +1,4 @@
-lass Zoho{
+class Zoho{
 	void display() {
 		System.out.println("I work at Zoho");
 	}
