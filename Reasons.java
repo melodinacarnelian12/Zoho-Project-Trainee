@@ -70,10 +70,23 @@ class Calender{
 //Can be used when we want to share instances of the same class 
 //shared between all objects.
 Example:
-
-
-
-
+ class Melo {
+     static int m2;//global variable can be accessed anywhere 
+    static int age=20;//global variable can be accessed anywhere 
+    static int height=140;//global variable can be accessed anywhere 
+    static int weight=50;//global variable can be accessed anywhere 
+    public static int bmi(){//static method is accessed anywhere inside the given class 
+        int bmi;
+        bmi=(height/2)+weight;
+        return bmi;
+    }
+    public static void main(String[] args) {
+        Melo m1=new Melo();
+        m2=m1.bmi();
+        System.out.println("The body mass index is " + m2);
+    }
+ }
+//op:The body mass index is 120
 
 3.Why static in public static void main?
 //Its a type of a method.Static method can be called without a creation of the object inside the class.
@@ -97,6 +110,7 @@ class ZohoEmployee {//outer class
      //If the field is made a non-static variable, there will be a compiler error.
    }
 }
+//op:This is a message from nested static class to Melo
   
   
   
