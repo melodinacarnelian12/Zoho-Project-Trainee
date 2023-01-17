@@ -31,7 +31,7 @@ public class Main {
   }
   public static void main(String[] args) {
     Main myCar = new Main();   
-    myCar.fullThrottle();      
+     myCar.fullThrottle();       
     myCar.speed(200);          
     myCar =null;//dereferncing so that for the next execution an NullPointerException is seen
     myCar.speed(200);
