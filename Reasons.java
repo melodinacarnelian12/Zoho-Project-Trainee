@@ -331,6 +331,29 @@ public class Main{
     }
 }
 
+	
+Where is enum used ?
+//An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+Example:
+//Days of the week is unchanged
+//months are unchanged 
+Syntax:
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+Level a = Level.MEDIUM;
+
+Where enums are not used?
+//Cannot be used in the case of single objects 
+//Also when the particular objected has to be changed or mutable.
+
+
+
+	
+
+
 
 
 
