@@ -112,6 +112,52 @@ class ZohoEmployee {//outer class
 }
 //op:This is a message from nested static class to Melo
   
+ 
+Where can Variable scopes can be used ?
+1.LOCAL Variable :
+public class Main {
+  public static void main(String[] args) {
+    int x = 100;// can be used only within the brackets 
+    System.out.println(x);
+  }System.out.println(x);//variable x cant be accessed outside the bracket 
+}
+//Only given and accessed only within the brackerts.
+
+2.Static Variable:
+public class Main {
+    static int x = 100;// x is the sam evalue throughout the program 
+    public static void main(String[] args) {
+    System.out.println(x);
+ } 
+}
+//Can be accessed anywhere without the use of creating the object
+
+
+3.Instant Variable:(other than static)
+//nstance variables are defined outside from any method declaration. 
+//They are used to represent the state of the object, and every object of the class has its copy of the instance members.
+Example:
+class Person{
+    int age;
+    String name;
+    Person(int age,String name){
+    //Accessing the instance variable using this keyword.
+        this.age=age;
+        this.name=name;
+    }
+    //Method to print the name of the Person
+    void printName(){
+      System.out.println(this.name);
+    }
+    public static void main(String args[]){
+
+    //Creating an instance of the class
+       Person ob=new Person(20,"Melo");
+     //Calling the method of the class
+       ob.printName();
+    }
+}
+
   
   
   
