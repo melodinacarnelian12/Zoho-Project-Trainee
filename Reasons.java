@@ -426,6 +426,19 @@ What is String pool?
 Where is stringbuffer and stringbuilder stored?
 //Both are stored on the heap memory because both these are mutable and changes can be only done on the heap memory and not on string constant pool.
 	
+What is inheritance and where it can be used ?
+//Inherit the use of properties from one class into another class.
+
+Types of inheritance with examples:
+//Single Inheritance-Single parent and a single base class (Father son relationship)
+//Multi-level Inheritance- single parent -single base class-from which single derieved class(food-pizza-pineapple pizza)
+//Hierarchical Inheritance-single parent class and many subclass(vegetables-carrort,raddish)
+//Hybrid Inheritance-many inheritance grouped together 
+//multiple inheritance-chain of types of inheritance
+	
+What is super and subclasses in inheritance?
+//the parental node or the main class is known as the super class and the derived class is known as the subclass.
+//Extra features will be included in the subclass with respect to the super class.
 	
 	
 	
