@@ -66,8 +66,37 @@ class Calender{
     }
 }
 
-2.What is a Static class and where can it be used ?  
+2.What is a Static variable and static method  and where can it be used ?
+//Can be used when we want to share instances of the same class 
+//shared between all objects.
+Example:
+
+
+
+
+
+3.Why static in public static void main?
+//Its a type of a method.Static method can be called without a creation of the object inside the class.
+//In general you cant call a method without creating an object.So obviosly you cant call the method "main"
+//Hence you use static to call the mainmethod without craeting an object.
+
   
+4.What is a static class and where can it be used?
+class ZohoEmployee {//outer class
+   private static String name = "Melo";
+
+   public static class Manager {//inner class which is nested 
+
+      public void testMethod() {
+         System.out.println("This is a message from nested static class to " + name);
+      }
+   }
+   public static void main(String args[]) {
+      ZohoEmployee.Manager nested = new Manager();
+      nested.testMethod();//Here, the inner class was able to access the field of the outer class because it is also a static member.
+     //If the field is made a non-static variable, there will be a compiler error.
+   }
+}
   
   
   
