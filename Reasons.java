@@ -233,29 +233,39 @@ public static void main(String[] args) {
 //If nothing is given its going to anonymously produce the data of the main class.
 //Hence called anonymous
 
+What is LAMBDA EXPRESSION?
+//They accept a set of parameters as input and return a value as an output.
+//Doesnt requirespecific name
+//Shortens code length
 
+eg:without lambda
+cube c=new cube;
+ with lambda
+cube c = (int a)->aaa;
 
+What is GENERICS:
+//Older versions of java takes all the inputs as objects.for example if u wanna add a and b,it takes them as objects and not as integers.
+//To avoid any errors,new java version introduced generics
+//Java Generic methods and generic classes helps to specify the data type of a class or method.
+//For example,consider an integer array and ur passing string to tht array ,older java will accept the string but throw error but new java versions wont even accept it.
+//Hence less errors
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ eg: ArrayList<String> a= new ArrayList<String>();
+        a.add("Melo");
+        a.add("Emy");
+	
+	
+What is WRAPPER:
+//Just a class defined for a primitive data type such as int,floar,char.
+//Wrapping a data type in a class
+	
+why wrapper?
+//Java is pure OOPS so everything should be as classes and objects
+//The wrapper classes in Java are used to convert primitive types (int, char, float, etc) into corresponding objects.
+eg:
+int a = 5;
+// converts into object
+Integer aObj = a;
 
 Where is abstract classes are used?
 Abstact classes are used when a particular in two cases where a particular method has a same function + the same method with different function.  
@@ -348,6 +358,8 @@ Level a = Level.MEDIUM;
 Where enums are not used?
 //Cannot be used in the case of single objects 
 //Also when the particular objected has to be changed or mutable.
+	
+what is polymorphism?
 
 
 
