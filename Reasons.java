@@ -392,7 +392,30 @@ What is compile time and run time?
 //Compile time means that a programming language liek java is converted into a bytecode.
 //Runtime means the byte code is converted into a machine understandable code or executable code.
 
+What is method overrding?
+//Same name but different classes with inheritance and has the same arguments.
+//Also called as run time polymorphism.
 
+Example:
+class Main1{
+    public void ctp(){
+        System.out.println("Same name and different class");}}
+        class Main2 extends Main1{
+    public void ctp(){
+        System.out.println("But has a same  argument");}
+
+public static void main(String[] args) {
+        Main1 m1= new Main1();
+        m1.ctp();
+        Main2 m2=new Main2();
+        m2.ctp();
+    }
+}
+
+Real time EAXMPLES:
+//suppose there is a method getInterestRate() which returns the interest rate of a bank. 
+//RBI is the superclass and it returns 7 for getInterestRate(). 
+//There are various banks like sbi, axis, icici, etc which extend RBI class and override the getInterestRate() method to return 7.5, 8, 8.5, etc respectively.
 	
 	
 	
