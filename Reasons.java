@@ -360,6 +360,56 @@ Where enums are not used?
 //Also when the particular objected has to be changed or mutable.
 	
 what is polymorphism?
+//Many classes that are inheritant by each other
+//many forms
+
+What is Method overloading?
+//Same name and same class but has a different arguments.
+//Also called as a Compile time polymorphism.
+
+Example:
+class Main{
+    public void ctp(){
+        System.out.println("Same name and has a same class");}
+    public void ctp(int a){
+        System.out.println("But has a different argument");}
+
+public static void main(String[] args) {
+        Main m1= new Main();
+        m1.ctp();
+        m1.ctp(676);
+    }
+}
+
+Real word examples ?
+//The payment option on any ecommerce website has several options like netbanking, COD, credit card, etc. 
+//That means, a payment method is overloaded several times to perform single payment function in various ways.
+or 
+//A transaction is done from a sender to a reciever.
+//Can be done either by paytm or gpay or Neft or any other means of online transaction.
+	
+What is compile time and run time?
+//Compile time means that a programming language liek java is converted into a bytecode.
+//Runtime means the byte code is converted into a machine understandable code or executable code.
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
