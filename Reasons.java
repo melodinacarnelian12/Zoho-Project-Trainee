@@ -158,6 +158,185 @@ class Person{
     }
 }//
 
+Where is varargs mainly used?
+//Varargs help us avoid writing boilerplate code by introducing the new syntax that can handle an arbitrary number of parameters automatically.
+//Whenever we dont know the number of arguments to be used.
+a)Example:(where no varags are used)
+class NoVararg {
+    public int sumNumber(int a, int b){
+        return a+b;
+    }
+    public int sumNumber(int a, int b, int c){
+        return a+b+c;
+    }
+    public static void main( String[] args ) {
+        NoVararg obj = new NoVararg();
+        System.out.println(obj.sumNumber(1, 2));
+        System.out.println(obj.sumNumber(1, 2, 3));
+    }
+}
+b)When varargs are used:
+class VarargExample {
+
+    public int sumNumber(int ... args){//dont oknow the number of arhuments to be summed up
+        System.out.println("argument length: " + args.length);
+        int sum = 0;
+        for(int x: args){//method or syntax for varags
+            sum += x;
+        }
+        return sum;
+    }
+    public static void main( String[] args ) {
+        VarargExample ex = new VarargExample();
+        int sum3 = ex.sumNumber(1, 3, 5);
+        System.out.println("sum3 = " + sum3);
+        int sum4 = ex.sumNumber(1, 3, 5, 7);
+        System.out.println("sum4 = " + sum4);
+    }
+}
+//used in the case where we dont know the number of arguments and have to write code for all the number of avarags present,instead use varags.
+//Real time example :Medicinal pill remainder (No matter how many inputs we give at a particular time
+//all the inputs should be displayed at the right time)
+
+Why inner classes and where it is used?
+//Java inner class or nested class is a class that is declared inside the class or interface.
+//We use inner classes to logically group classes and interfaces in one place to be more readable and maintainable.
+//It can access all the members of the outer class, including private data members and methods.
+Example:
+class BankAcct { //outer class
+ private class Interest {//inner class which has to be protected
+  private double rate;
+  void calInterest() {
+    double interest = bal * rate/100;
+    bal += interest;
+    System.out.println("Balance = " +bal);
+   }
+//To keep the rate of interest private and safe we keep the secured data and methods inside the inner class and its privated.
+//And it can access the outer class but the outer class cannot modify the inner class.
+
+
+ Where anonymous classes are used ?
+ class Zoho{
+	void display() {
+		System.out.println("I work at Zoho");
+	}}
+public class Main {
+public static void main(String[] args) {
+		Zoho c = new Zoho()   // anonymous class
+				{void display() {
+						System.out.println("I dont work at Zoho ");
+					}};
+				Zoho c2 = new Zoho();
+		c.display();//I dont work at Zoho
+		c2.display();//I work at Zoho
+}
+//If nothing is given its going to anonymously produce the data of the main class.
+//Hence called anonymous
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Where is abstract classes are used?
+Abstact classes are used when a particular in two cases where a particular method has a same function + the same method with different function.  
+Example:
+abstract class nationality {
+    public void laugh() {//same method for all the objects 
+        System.out.println("hahahahahahahahahaha");
+    }
+    public void greet() {//same method for all the objects 
+        System.out.println("Greet with a hand shake");
+    }
+     abstract void talk();//diffirent method for the objects 
+     abstract void sayhello();//diffirent method for the objects
+}
+    class indian extends nationality {
+         void talk() {
+            System.out.println("India");//diffirent method for indian function 
+        }
+         void sayhello() {
+            System.out.println("Namaste");
+        }
+    }
+    class british extends nationality {
+         void talk() {
+            System.out.println("england");//diffirent method for british function but with the same method name declared in the abstract
+        }
+         void sayhello() {
+            System.out.println("hello");
+        }
+    }
+public class Main{
+    public static void main(String[] args) {
+        indian  in = new indian();
+        in.sayhello();
+        british b=new british();
+        b.laugh();
+        b.talk();
+  }
+}
+
+Where interfaces are used ?
+Its used in a case where all the methods inside has the same name but the functionality is different.
+Example:
+interface nationality {
+      void talk();//same name of the method but for each object its going to perform a diffirent function 
+      void sayhello();
+}
+    class indian implements nationality {
+         public void talk() {
+            System.out.println("India");
+        }
+         public void sayhello() {
+            System.out.println("Namaste");
+        }
+    }
+    class british implements nationality {
+         public void talk() {
+            System.out.println("england");
+        }
+         public void sayhello() {
+            System.out.println("hello");
+        }
+    }
+    
+public class Main{
+    public static void main(String[] args) {
+        indian in = new indian(); 
+        in.talk();
+        in.sayhello();
+        british b=new british();
+        b.talk();
+        b.sayhello();  
+    }
+}
+
+
+
+
+
+  
+
   
   
   
