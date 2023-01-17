@@ -279,7 +279,7 @@ What is LAMBDA EXPRESSION?
 eg:without lambda
 cube c=new cube;
  with lambda
-cube c = (int a)->aaa;
+cube c = (int a)->a*a*a;
 
 What is GENERICS:
 //Older versions of java takes all the inputs as objects.for example if u wanna add a and b,it takes them as objects and not as integers.
