@@ -417,9 +417,14 @@ Real time EAXMPLES:
 //RBI is the superclass and it returns 7 for getInterestRate(). 
 //There are various banks like sbi, axis, icici, etc which extend RBI class and override the getInterestRate() method to return 7.5, 8, 8.5, etc respectively.
 	
-	
-	
-	
+
+What is String pool?
+//String pool is nothing but a storage area in Java heap where string literals stores. 
+//It is also known as String Intern Pool or String Constant Pool.
+//It only stores strings as they are unmuttable.
+
+Where is stringbuffer and stringbuilder stored?
+//Both are stored on the heap memory because both these are mutable and changes can be only done on the heap memory and not on string constant pool.
 	
 	
 	
