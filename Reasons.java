@@ -454,7 +454,34 @@ Real time EAXMPLES:
 //suppose there is a method getInterestRate() which returns the interest rate of a bank. 
 //RBI is the superclass and it returns 7 for getInterestRate(). 
 //There are various banks like sbi, axis, icici, etc which extend RBI class and override the getInterestRate() method to return 7.5, 8, 8.5, etc respectively.
-	
+
+
+String in java:
+1.Heap on string constant pool
+2.They are immutable.Example modifying the string Hello to Hello World is not possible
+3.The threads are synchronized
+4.It is thread safe
+  eg:String s="Hello"
+     s="world"
+     
+String Buffer:
+1.Stored on heap
+2.They are mutable
+3.They are synchronized and thread safe
+4.Less efficient
+  eg:StringBuffer sb=new StringBuffer("Hello")
+     sb.append("world")
+
+String Builder:
+1.Stored on heap
+2.They are mutable
+3.They are not synchronized but faster
+4.More efficient
+  eg:StringBuilder sb=new StringBuilder("Hello")
+     sb.append("world")
+     
+Various methods include append,reverse,delete,insert
+    
 
 What is String pool?
 //String pool is nothing but a storage area in Java heap where string literals stores. 
@@ -478,7 +505,27 @@ What is super and subclasses in inheritance?
 //the parental node or the main class is known as the super class and the derived class is known as the subclass.
 //Extra features will be included in the subclass with respect to the super class.
 	
+Example of inheritance:
+Base class:Vehicle
+Sub classes:car,truck
+sub1 class(f1 gen):benz, audi
 	
+How should an inhertant be found?
+//if the sub class "is a" inhertant of the super class.
+
+Example:
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class Main{  
+public static void main(String args[]){  
+Dog d=new Dog();  
+d.bark();  
+d.eat();  
+}}  
 	
 	
 	
