@@ -18,6 +18,44 @@ Garbage Collection in Stack?
 Stack vs Heap?
 //Stack-Method invocations and Local variables live here(LIFO)-Object variables lives on the stack 
 //Heap-Objects that would be deleted soon lives here-Object lives on Heap
+
+	
+How is dereferencing done  ?
+//First Method of assigning the viariable to null
+public class Main {
+ public void fullThrottle() {
+    System.out.println("The car is going as fast as it can!");
+  }
+  public void speed(int maxSpeed) {
+    System.out.println("Max speed is: " + maxSpeed);
+  }
+  public static void main(String[] args) {
+    Main myCar = new Main();   
+    myCar.fullThrottle();      
+    myCar.speed(200);          
+    myCar =null;//dereferncing so that for the next execution an NullPointerException is seen
+    myCar.speed(200);
+  }
+}
+
+
+//Variable Assigning to other Variable so that the first Variable is deleted 
+public class Main {
+ public void fullThrottle() {
+    System.out.println("The car is going as fast as it can!");
+  }
+  public void speed(int maxSpeed) {
+    System.out.println("Max speed is: " + maxSpeed);
+  }
+  public static void main(String[] args) {
+    Main myCar = new Main();   
+    myCar.fullThrottle();      
+    myCar.speed(200);          
+    Main myBike =new Main();
+    myBike=myCar;
+    myBike.speed(200); 
+  }
+}
   
 Where is modifiers used in java?
 //Access data to other files
