@@ -3,6 +3,8 @@
 //If we delete Zoho Zoho_Department doesnt exist
 //But if we delete Zoho_Department Zoho exist!
 //One to one relationship
+//Has a " part of " relationship between each other 
+//Strong entitry that both classes doesnt exist without each other
 //Example code:
 import java.io.*;   
 import java.util.*; 
