@@ -111,7 +111,7 @@ Example:
      Wrapper Class will convert primitive data types into objects.
      In java we cant intake a primitive data type as int hence we must convert everything as objects.
      Hence these data types are wrapped around objects with object wrappers.
-     //Data structures in the Collection framework such as ArrayList and Vector store only the objects (reference types) and not the primitive types.
+     //Data structures in the Collection framework such as ArrayList stores only the objects (reference types) and not the primitive types.
      //The object is needed to support synchronization in multithreading.
        
  //1.Autoboxing with example:
