@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 class Check_the_number{
     private static void check(int[] arr, int toCheckValue){
-        boolean test = false;3
+        boolean test = false;
 		for (int element : arr) {
 			if ((element^toCheckValue)==0) {//using the operator xor 
 				test = true;
