@@ -3,6 +3,7 @@
 //An author can exist without a book 
 //And a book can Exist without the author 
 //Advantages reusability of codes!
+//week entity that both can exist without each other 
 
 class Author
 {
