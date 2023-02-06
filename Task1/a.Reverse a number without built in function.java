@@ -1,5 +1,6 @@
 1.Reverse the number in java without inbuilt functions
 
+Approach A:
 import java.util.Scanner;
 public class Reverse_the_number 
 {
@@ -23,3 +24,28 @@ Formula:
 rem=num%10(remainder)
 rev=rev*10+rem(adding the values of reverse)
 num=num/10(delete that number after reversing)
+
+    
+    
+Approach B:
+import java.util.*;
+import java.util.stream.*;
+public class Reverse_the_integer_array
+{
+    public static void main(String[] args) 
+    {
+        Integer[] intArray = {1,2,3,4,5,6,7,8,9,10};
+        System.out.println("Original Array:");
+        for(int i=0;i<intArray.length;i++)
+            System.out.print(intArray[i] + "  ");
+            System.out.println();
+            System.out.println("Reversed Array:");
+            for(int i=intArray.length-1;i>=0;i--)
+                System.out.print(intArray[i] + "  ");
+    }
+}
+
+
+Formula:
+i=end;i=start;i--(function=decrement)
+    
