@@ -38,7 +38,7 @@ class Greatest_of_numbers_in_a_list
  
     public static void main(String[] args)
     {
-        int[] num = { 2, 4, 8, 90, 77, 54 };
+        int[] num = {0, 2, 4, 8, 90, 77, 54 };
        greternumber(num);
     }
 }
