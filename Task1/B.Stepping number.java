@@ -79,48 +79,4 @@ public class stepper {
 
 
 
-or 
-Approach 2:
-import java.util.*;
 
-public class Solution {
-
-    public static void DFSTravel(int start, int end, int steppingNum, List<Integer> steppingNumList) {
-        if (steppingNum >= start && steppingNum <= end)
-            steppingNumList.add(steppingNum);
-
-        if (steppingNum == 0 || steppingNum > end)
-            return;
-
-        int lastDigit = steppingNum % 10;
-
-        int stepNumLeft = steppingNum * 10 + (lastDigit - 1);
-        int stepNumRight = steppingNum * 10 + (lastDigit + 1);
-
-        if (lastDigit == 0)
-            DFSTravel(start, end, stepNumRight, steppingNumList);
-
-        else if (lastDigit == 9)
-            DFSTravel(start, end, stepNumLeft, steppingNumList);
-        else {
-            DFSTravel(start, end, stepNumLeft, steppingNumList);
-            DFSTravel(start, end, stepNumRight, steppingNumList);
-        }
-    }
-
-    public static void printSteppingNos(int start, int end) {
-        List<Integer> steppingNumList = new ArrayList<>();
-        System.out.print("The Stepping Numbers from " + start + " to " + end + " are: ");
-        for (int i = 0; i <= 9; i++)
-            DFSTravel(start, end, i, steppingNumList);
-
-        Collections.sort(steppingNumList);
-        System.out.println(steppingNumList);
-    }
-
-    public static void main(String[] args) {
-        int n = 0, m = 32;
-
-        printSteppingNos(n, m);
-    }
-}
