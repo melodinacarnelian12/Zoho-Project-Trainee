@@ -34,45 +34,42 @@ public class ProductImplementation {
         nos--;
     }
 
-    public static int[] append(int[] arr, int key) {
-        int[] pin_temp = new int[arr.length + 1];
-        System.arraycopy ( arr, 0, pin_temp, 0, arr.length );
-        pin_temp[arr.length] = key;
-        return pin_temp;
-    }
+    public static ArrayList<Integer> append(ArrayList<Integer> arr, int key) {
+    ArrayList<Integer> temp = new ArrayList<>(arr);
+    temp.add(key);
+    return temp;
+}
 
 
-    public static ArrayList<Integer> filter_catog(int cat) {
-        ArrayList<Integer> temp = new ArrayList<> ( );
-        try {
-            for (int k = 0; k < nos; k++) {
-                if (catogs.get ( k ) == cat) {
-                    temp.add ( k );
-                }
-            }
-        } catch (Exception ignored) {
+//     public static ArrayList<Integer> filter_catog(int cat) {
+//         ArrayList<Integer> temp = new ArrayList<> ( );
+//         try {
+//             for (int k = 0; k < nos; k++) {
+//                 if (catogs.get ( k ) == cat) {
+//                     temp.add ( k );
+//                 }
+//             }
+//         } catch (Exception ignored) {
 
-        }
-        return temp;
-    }
+//         }
+//         return temp;
+//     }
 
-    public static int[] filter_vendor(int vendor_id) {
-        int[] temp = {};
-        try {
-            for (int k = 0; k < nos; k++) {
-                if (sellerIds.get ( k ) == vendor_id) {
-                    temp = append ( temp, k );
-                }
-            }
-        } catch (Exception ignored) {
-        }
-        return temp;
-    }
+//     public static int[] filter_vendor(int vendor_id) {
+//         int[] temp = {};
+//         try {
+//             for (int k = 0; k < nos; k++) {
+//                 if (sellerIds.get ( k ) == vendor_id) {
+//                     temp = append ( temp, k );
+//                 }
+//             }
+//         } catch (Exception ignored) {
+//         }
+//         return temp;
+//     }
 
 
     public static void prod_oper(String head, ArrayList<Integer> arr) {
-
-       // ArrayList<Integer> temp_prods = new ArrayList<> ( );
         int com = 0;
         while (true) {
             System.out.println ( "----------------------------------" );
