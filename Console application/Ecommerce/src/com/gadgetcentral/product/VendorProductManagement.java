@@ -19,7 +19,7 @@ public class VendorProductManagement {
             System.out.println ( "Option\n1 - Remove Product\n2 - Edit Product\n3 - Exit" );
             int[] prods = ProductImplementation.filter_vendor ( usr_index );
             if (prods.length == 0) {
-                System.out.println ( "No Products Added, Add more product and Joy" );
+                System.out.println ( "No Products Added, Add more products to continue" );
             }
             for (int i : prods) {
                 System.out.println ( "Product ID : " + i + "\n" + ProductImplementation.names.get ( i ) + "\n" + ProductImplementation.scripts.get ( i ) + "\nPrice:" + ProductImplementation.prices.get ( i ) + "\n" );
