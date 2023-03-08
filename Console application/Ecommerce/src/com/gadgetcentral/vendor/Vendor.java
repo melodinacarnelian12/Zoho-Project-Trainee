@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Vendor {
     static Scanner sc = new Scanner(System.in);
-        public static int user_nos = 10;
+        public static int user_nos = 1;
         public static ArrayList<String> user_names = new ArrayList<>() {{
             add("melo");
         }};
