@@ -11,7 +11,6 @@ import static com.gadgetcentral.customer.Customer.wallet_bal;
 
 
 public class CheckOut {
-    String[] orderDet = {"", "", ""};
     Scanner sc = new Scanner ( System.in );
 
     public boolean checkOut() {
@@ -26,7 +25,7 @@ public class CheckOut {
             List<Integer> cartContent = cartData.get ( userIndex ).getItems ( );
             int overallPrice = 0;
 
-            StringBuilder Order_receipt = new StringBuilder ( "Product                                           Count          Price\n" );
+           
             System.out.println ( "Product                                           Count          Price" );
 
             for (int i = 0; i < cartContent.size ( ); i++) {
@@ -57,7 +56,6 @@ public class CheckOut {
                         wallet_bal.set ( userIndex, overallPrice );
                         System.out.println ( "Your order has been Successfully Placed." );
                         cartData.get ( userIndex ).clearCart ( );
-                        orderDet[userIndex] += Order_receipt + "%";
                         order_complete = true;
                         break;
                     } else {
@@ -66,7 +64,6 @@ public class CheckOut {
                 } else if (pay_opt == 2) {
                     System.out.println ( "Your order has been Successfully Placed on Cash On Delivery." );
                     cartData.get ( userIndex ).clearCart ( );
-                    orderDet[userIndex] += Order_receipt + "%";
                     order_complete = true;
                     break;
                 } else {
